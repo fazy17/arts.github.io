@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         calc = require('./parts/calc'),
         features = require('./parts/features'),
         form = require('./parts/form'),
-        filter = require('./parts/filter');
+        filter = require('./parts/filter'),
+        slider = require('./parts/slider');
 
     mainSlider();
     popups();
@@ -16,4 +17,5 @@ document.addEventListener('DOMContentLoaded', function() {
     features();
     form();
     filter();
+    slider();
 });
