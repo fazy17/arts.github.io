@@ -1,0 +1,13 @@
+!function(e){var t={};function n(o){if(t[o])return t[o].exports;var r=t[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)n.d(o,r,function(t){return e[t]}.bind(null,r));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s="./src/js/index.js")}({"./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+/*! no static exports found */function(e,t,n){document.addEventListener("DOMContentLoaded",function(){"use strict";let e=n(/*! ./parts/main-slider */"./src/js/parts/main-slider.js"),t=n(/*! ./parts/popups */"./src/js/parts/popups.js");e(),t()})},"./src/js/parts/main-slider.js":
+/*!*************************************!*\
+  !*** ./src/js/parts/main-slider.js ***!
+  \*************************************/
+/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelectorAll(".main-slider-item"),t=1;function n(n){!function(n){n>e.length&&(t=1),n<1&&(t=e.length),e.forEach(e=>e.style.display="none"),e[t-1].style.display="block",e[t-1].classList.add("animated"),e[t-1].classList.add("slideInDown")}(t+=n)}e[0].style.display="none",setTimeout(function e(){n(t<=1?1:-1),setTimeout(e,5e3)})}},"./src/js/parts/popups.js":
+/*!********************************!*\
+  !*** ./src/js/parts/popups.js ***!
+  \********************************/
+/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelectorAll(".button-design"),t=document.querySelector(".popup-design"),n=t.querySelector(".popup-close");for(let n=0;n<e.length;n++)e[n].addEventListener("click",function(){t.style.display="flex",document.body.style.overflow="hidden"});n.addEventListener("click",function(){t.style.display="none",document.body.style.overflow=""})}}});
