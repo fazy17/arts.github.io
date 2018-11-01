@@ -16,8 +16,7 @@ function mainSlider() {
         slides.forEach((item) => item.style.display = 'none');
 
         slides[slideIndex - 1].style.display = 'block';
-        slides[slideIndex - 1].classList.add('animated');
-        slides[slideIndex - 1].classList.add('slideInDown');
+        slides[slideIndex - 1].className = 'animated slideInDown';
 
     }
 

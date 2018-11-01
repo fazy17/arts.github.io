@@ -9,14 +9,8 @@ function more() {
         btn.style.display = 'none';
         
         for (let i = 0; i < more.length; i++) {
-            more[i].classList.remove('hidden-lg');
-            more[i].classList.remove('hidden-md');
-            more[i].classList.remove('hidden-sm');
-            more[i].classList.remove('hidden-xs');
-            more[i].classList.add('col-sm-3');
-            more[i].classList.add('col-sm-offset-0');
-            more[i].classList.add('col-xs-10');
-            more[i].classList.add('col-xs-offset-1');
+            more[i].className = '';
+            more[i].className = 'col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1 styles-2';
         }
     }
 }
