@@ -4,10 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let mainSlider = require('./parts/main-slider'),
         popups = require('./parts/popups'),
         more = require('./parts/more'),
-        calc = require('./parts/calc');
+        calc = require('./parts/calc'),
+        features = require('./parts/features'),
+        form = require('./parts/form');
 
     mainSlider();
     popups();
     more();
     calc();
+    features();
+    form();
 });

@@ -14,9 +14,6 @@ function popups() {
             closeModal();
         });
 
-        overlay.addEventListener('click', function() {
-            closeModal();
-        });
 
         function showModal() {
             overlay.style.display = 'flex';
@@ -48,10 +45,6 @@ function popups() {
             closeModal();
         });
 
-        overlay.addEventListener('click', function() {
-            closeModal();
-        });
-
         function showModal() {
             overlay.style.display = 'flex';
             document.body.style.overflow = 'hidden';
@@ -77,10 +70,6 @@ function popups() {
         });
 
         close.addEventListener('click', function() {
-            closeModal();
-        });
-
-        overlay.addEventListener('click', function() {
             closeModal();
         });
 
