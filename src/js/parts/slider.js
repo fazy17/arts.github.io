@@ -8,10 +8,12 @@ function slider() {
 
     next.addEventListener('click', function() {
         plusSlides(1);
+        slides[slideIndex - 1].className = 'feedback-slider-item animated fadeInLeft';
     });
 
     prev.addEventListener('click', function() {
         plusSlides(-1);
+        slides[slideIndex - 1].className = 'feedback-slider-item animated fadeInRight';
     });
     
     function showSlide(n) {
@@ -26,7 +28,6 @@ function slider() {
         slides.forEach((item) => item.style.display = 'none');
 
         slides[slideIndex - 1].style.display = 'flex';
-        slides[slideIndex - 1].className = 'feedback-slider-item animated fadeInRight';
 
     }
 

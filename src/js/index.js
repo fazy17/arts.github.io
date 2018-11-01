@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         features = require('./parts/features'),
         form = require('./parts/form'),
         filter = require('./parts/filter'),
-        slider = require('./parts/slider');
+        slider = require('./parts/slider'),
+        accordion = require('./parts/accordion');
 
     mainSlider();
     popups();
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', function() {
     form();
     filter();
     slider();
+    accordion();
 });
