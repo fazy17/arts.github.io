@@ -19,6 +19,7 @@ function filter() {
 
         for (let i = 0; i < images.length; i++) {
             images[i].style.display = 'block';
+            empty.style.display = 'none';
         }
     });
     
@@ -31,6 +32,7 @@ function filter() {
 
         for (let i = 0; i < images.length; i++) {
             if (images[i].classList.contains('grandmother')) {
+                empty.style.display = 'none';
                 images[i].style.display = 'block';
             } else {
                 images[i].style.display = 'none';
@@ -52,6 +54,7 @@ function filter() {
         for (let i = 0; i < images.length; i++) {
 
             if (images[i].classList.contains('granddad')) {
+                empty.style.display = 'none';
                 images[i].style.display = 'block';
             } else {
                 images[i].style.display = 'none';
@@ -73,6 +76,7 @@ function filter() {
         for (let i = 0; i < images.length; i++) {
 
             if (images[i].classList.contains('lovers')) {
+                empty.style.display = 'none';
                 images[i].style.display = 'block';
             } else {
                 images[i].style.display = 'none';
@@ -91,6 +95,7 @@ function filter() {
         for (let i = 0; i < images.length; i++) {
 
             if (images[i].classList.contains('girl')) {
+                empty.style.display = 'none';
                 images[i].style.display = 'block';
             } else {
                 images[i].style.display = 'none';
@@ -108,6 +113,7 @@ function filter() {
         for (let i = 0; i < images.length; i++) {
 
             if (images[i].classList.contains('guy')) {
+                empty.style.display = 'none';
                 images[i].style.display = 'block';
             } else {
                 images[i].style.display = 'none';
@@ -125,6 +131,7 @@ function filter() {
         for (let i = 0; i < images.length; i++) {
 
             if (images[i].classList.contains('chef')) {
+                empty.style.display = 'none';
                 images[i].style.display = 'block';
             } else {
                 images[i].style.display = 'none';
