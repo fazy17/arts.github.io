@@ -1,4 +1,13 @@
 function popups() {
+
+    function startTimer() {
+        let overlay = document.querySelector('.popup-consultation');
+
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    let present = setTimeout(startTimer, 60000);
+
     function popupDesign() {
         let btns = document.querySelectorAll('.button-design'),
             overlay = document.querySelector('.popup-design'),
@@ -7,6 +16,7 @@ function popups() {
         for (let i = 0; i < btns.length; i++) {
             btns[i].addEventListener('click', function() {
                 showModal();
+                clearTimeout(present);
             });
         }
 
@@ -29,6 +39,7 @@ function popups() {
             overlay.style.display = 'none';
             document.body.style.overflow = '';
         }
+
     }
     
     popupDesign();
@@ -43,6 +54,7 @@ function popups() {
         for (let i = 0; i < btns.length; i++) {
             btns[i].addEventListener('click', function() {
                 showModal();
+                clearTimeout(present);
             });
         }
 
@@ -65,6 +77,7 @@ function popups() {
             overlay.style.display = 'none';
             document.body.style.overflow = '';
         }
+
     }
 
     popupConsultation();
@@ -78,6 +91,7 @@ function popups() {
 
         btns.addEventListener('click', function() {
             showModal();
+            clearTimeout(present);
         });
 
         close.addEventListener('click', function() {
