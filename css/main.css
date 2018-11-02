@@ -1068,6 +1068,7 @@ h4 {
   border: none;
 }
 .popup-content {
+  z-index: 21;
   position: fixed;
   text-align: center;
   max-width: 35rem;
@@ -1114,6 +1115,7 @@ h4 {
   border: none;
 }
 .popup-content {
+  z-index: 21;
   position: fixed;
   text-align: center;
   max-width: 35rem;
@@ -1247,6 +1249,7 @@ h4 {
   border: none;
 }
 .popup-content {
+  z-index: 21;
   position: fixed;
   text-align: center;
   max-width: 35rem;

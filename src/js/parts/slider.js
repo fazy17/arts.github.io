@@ -8,12 +8,12 @@ function slider() {
 
     next.addEventListener('click', function() {
         plusSlides(1);
-        slides[slideIndex - 1].className = 'feedback-slider-item animated fadeInLeft';
+        slides[slideIndex - 1].className = 'feedback-slider-item animated fadeInRight';
     });
 
     prev.addEventListener('click', function() {
         plusSlides(-1);
-        slides[slideIndex - 1].className = 'feedback-slider-item animated fadeInRight';
+        slides[slideIndex - 1].className = 'feedback-slider-item animated fadeInLeft';
     });
     
     function showSlide(n) {

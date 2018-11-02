@@ -14,9 +14,14 @@ function popups() {
             closeModal();
         });
 
+        document.addEventListener('click', function(e)  {
+            if (e.target.classList.contains('popup-design') || e.target.classList.contains('form')) {
+                closeModal(); 
+            }
+        });
 
         function showModal() {
-            overlay.style.display = 'flex';
+            overlay.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
 
@@ -45,6 +50,12 @@ function popups() {
             closeModal();
         });
 
+        document.addEventListener('click', function(e)  {
+            if (e.target.classList.contains('popup-consultation') || e.target.classList.contains('popup-content')) {
+                closeModal();
+            }
+        });
+
         function showModal() {
             overlay.style.display = 'flex';
             document.body.style.overflow = 'hidden';
@@ -71,6 +82,12 @@ function popups() {
 
         close.addEventListener('click', function() {
             closeModal();
+        });
+
+        document.addEventListener('click', function(e)  {
+            if (e.target.classList.contains('popup-gift')) {
+                closeModal();
+            }
         });
 
         function showModal() {
