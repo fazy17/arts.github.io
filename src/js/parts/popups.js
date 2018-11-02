@@ -1,5 +1,5 @@
 function popups() {
-
+    // 60 сек на страницу
     function startTimer() {
         let overlay = document.querySelector('.popup-consultation');
 
@@ -7,6 +7,45 @@ function popups() {
         document.body.style.overflow = 'hidden';
     }
     let present = setTimeout(startTimer, 60000);
+
+    // низ страницы 
+    function presentDown() {
+        let btns = document.getElementsByTagName('button'),
+            btnClick = 0;
+
+        window.addEventListener('scroll', function() {
+            if (btnClick == 0) {
+                if (document.documentElement.scrollTop) {
+                    currentScroll = document.documentElement.scrollTop;
+                } else {
+                    currentScroll = document.body.scrollTop; 
+                }
+
+                totalHeight = document.body.offsetHeight;
+                visibleHeight = document.documentElement.clientHeight;    
+
+                if (totalHeight <= currentScroll + visibleHeight ) {
+                    let overlay = document.querySelector('.popup-gift'),
+                        btns = document.querySelector('.fixed-gift');
+                        
+                    overlay.style.display = 'flex';
+                    btns.style.display = 'none';
+                    document.body.style.overflow = 'hidden';
+
+                }             
+            }
+        });
+        
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function() {
+                btnClick = 1; 
+            });            
+        }
+
+    }
+
+    presentDown();
+
 
     function popupDesign() {
         let btns = document.querySelectorAll('.button-design'),
