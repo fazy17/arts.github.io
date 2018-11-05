@@ -10,8 +10,6 @@ function filter() {
             }
             
             this.classList.add('active');
-
-            let classes = ['lovers', 'girl', 'all', 'guy', 'grandmother', 'granddad', 'chef'];
             
             for (let a = 0; a < classes.length; a++) {
                 if (menu[i].classList.contains(classes[a]) == images[i].classList.contains(classes[a])) {

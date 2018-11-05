@@ -112,7 +112,7 @@ a.btn {
   position: relative;
   top: 50%; 
   left: 50%;
-  background: #fff;
+  background: #f7e7e6;
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -127,7 +127,7 @@ a.btn {
   height: 32px;
   padding: 12px 30px;
   overflow: hidden;
-  background: #e2525c;
+  background: #333;
 }
 
 .btn-close {
@@ -140,7 +140,7 @@ a.btn {
 .good-job {
   text-align: center;
   font-family: 'Montserrat', Arial,       Helvetica, sans-serif;
-  color: #e2525c;
+  color: #333;
 }
 .good-job .fa-thumbs-o-up {
   font-size: 60px;

@@ -77,9 +77,15 @@ function form() {
                     messageStatus.textContent = message.success;
                     overlay.classList.add('open');
                     overlay.addEventListener('click', function() {
+                        closeSuccess();
+                    }); 
+
+                    setTimeout(closeSuccess, 2000);
+
+                    function closeSuccess() {
                         overlay.classList.remove('open');
                         statusMessage.remove()
-                    }); 
+                    }
                 })
                 .catch(()=> {
                     let overlayDesign = document.querySelector('.popup-design'),
