@@ -46,7 +46,6 @@ function popups() {
 
     presentDown();
 
-
     function popupDesign() {
         let btns = document.querySelectorAll('.button-design'),
             overlay = document.querySelector('.popup-design'),
