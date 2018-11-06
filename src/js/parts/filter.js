@@ -17,14 +17,13 @@ function filter() {
                     images[i].style.display = 'block';
                 } else {
                     images[i].style.display = 'none';
-                    
                 }   
                 
                 console.log(images[i].classList.contains(this.classList[1]))
 
                 if (images[i].classList.contains(this.classList[1])) {
                     empty.style.display = 'block';
-                }
+                } 
             }
         });
     }
