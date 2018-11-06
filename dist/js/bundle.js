@@ -14,7 +14,7 @@
 /*!**********************************!*\
   !*** ./src/js/parts/features.js ***!
   \**********************************/
-/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".burger"),t=document.querySelector(".burger-menu");document.querySelector(".footer"),e.addEventListener("click",function(){""==t.style.display?t.style.display="block":t.style.display=""})}},"./src/js/parts/filter.js":
+/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".burger"),t=document.querySelector(".burger-menu");window.addEventListener("resize",function(){window.innerWidth<=768?e.addEventListener("click",function(){""==t.style.display?t.style.display="block":t.style.display=""}):t.style.display=""})}},"./src/js/parts/filter.js":
 /*!********************************!*\
   !*** ./src/js/parts/filter.js ***!
   \********************************/
