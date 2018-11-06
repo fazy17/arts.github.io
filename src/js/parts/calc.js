@@ -12,11 +12,10 @@ function calc() {
 
         if (material[material.selectedIndex].value == 'Выберите материал картины' || size[size.selectedIndex].value == 'Выберите размер картины') {
             totalInput.textContent = 'Для расчета нужно выбрать размер картины и материал картины'
+        } else if (othersAmenities[othersAmenities.selectedIndex].value != 'Дополнительные услуги' ) {
+            elseIf();
         } else {
-            total = totalSize + totalMaterial;
-            totalInput.textContent = total;
-
-            promoValueCheck(total, total);
+            elseAll();
         }
         
     });
@@ -26,11 +25,10 @@ function calc() {
 
         if (size[size.selectedIndex].value == 'Выберите размер картины' || material[material.selectedIndex].value == 'Выберите материал картины') {
             totalInput.textContent = 'Для расчета нужно выбрать размер картины и материал картины';
+        } else if (othersAmenities[othersAmenities.selectedIndex].value != 'Дополнительные услуги' ) {
+            elseIf();
         } else {
-            total = totalSize + totalMaterial;
-            totalInput.textContent = total;
-
-            promoValueCheck(total, total);
+            elseAll();
         }
     });
 
@@ -56,7 +54,7 @@ function calc() {
         if (othersAmenities[othersAmenities.selectedIndex].value != 'Дополнительные услуги' && this.value == promoValue) {
             totalPromo = totalOthers - ((totalOthers / 100)*30);
             totalInput.textContent = totalPromo;
-        } else if (othersAmenities[othersAmenities.selectedIndex].value != 'Дополнительные услуги' ) {
+        } else if (othersAmenities[othersAmenities.selectedIndex].value != 'Дополнительные услуги') {
             totalInput.textContent = totalOthers;
         } else {
             totalInput.textContent = total;
@@ -69,6 +67,20 @@ function calc() {
             value = value - ((dividend / 100)*30);
             totalInput.textContent = value;
         }
+    }
+
+    function elseIf() {
+        total = totalSize + totalMaterial + totalOthersAmenities;
+        totalInput.textContent = total;
+
+        promoValueCheck(total, total);
+    }
+
+    function elseAll() {
+        total = totalSize + totalMaterial;
+        totalInput.textContent = total;
+
+        promoValueCheck(total, total);
     }
 }
 
