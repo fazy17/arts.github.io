@@ -16,10 +16,7 @@ function calc() {
             total = totalSize + totalMaterial;
             totalInput.textContent = total;
 
-            if (promo.value == promoValue) {
-                total = total - ((total / 100)*30);
-                totalInput.textContent = total;
-            }
+            promoValueCheck(total, total);
         }
         
     });
@@ -28,31 +25,30 @@ function calc() {
         totalMaterial = +this[this.selectedIndex].value;
 
         if (size[size.selectedIndex].value == 'Выберите размер картины' || material[material.selectedIndex].value == 'Выберите материал картины') {
-            totalInput.textContent = 'Для расчета нужно выбрать размер картины и материал картины'
+            totalInput.textContent = 'Для расчета нужно выбрать размер картины и материал картины';
         } else {
             total = totalSize + totalMaterial;
             totalInput.textContent = total;
 
-            if (promo.value == promoValue) {
-                total = total - ((total / 100)*30);
-                totalInput.textContent = total;
-            }
+            promoValueCheck(total, total);
         }
     });
 
     othersAmenities.addEventListener('click', function() {
         totalOthersAmenities = +this[this.selectedIndex].value;
         
-        if (size[size.selectedIndex].value == 'Выберите размер картины' || material[material.selectedIndex].value == 'Выберите материал картины' || othersAmenities[othersAmenities.selectedIndex].value == 'Дополнительные услуги') {
-            totalInput.textContent = total;
+        if (size[size.selectedIndex].value == 'Выберите размер картины' || material[material.selectedIndex].value == 'Выберите материал картины') {
+            totalInput.textContent = 'Для расчета нужно выбрать размер картины и материал картины';
         } else {
-            totalOthers = totalSize + totalMaterial + totalOthersAmenities;
-            totalInput.textContent = totalOthers;
-
-            if (promo.value == promoValue) {
-                totalOthers = totalOthers - ((totalOthers / 100)*30);
+            if (othersAmenities[othersAmenities.selectedIndex].value == 'Дополнительные услуги') {
+                totalOthers = totalSize + totalMaterial;
+                totalInput.textContent = totalOthers;
+            } else {
+                totalOthers = totalSize + totalMaterial + totalOthersAmenities;
                 totalInput.textContent = totalOthers;
             }
+            
+            promoValueCheck(totalOthers, totalOthers);
         }
     });
 
@@ -67,6 +63,13 @@ function calc() {
         }
 
     });
+
+    function promoValueCheck(value, dividend) {
+        if (promo.value == promoValue) {
+            value = value - ((dividend / 100)*30);
+            totalInput.textContent = value;
+        }
+    }
 }
 
 module.exports = calc;

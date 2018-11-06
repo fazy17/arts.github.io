@@ -8,25 +8,26 @@ function filter() {
             for (let i = 0; i < menu.length; i++) {
                 menu[i].classList.remove('active');
             }
-            
+
             this.classList.add('active');
-            
-            for (let a = 0; a < classes.length; a++) {
-                if (menu[i].classList.contains(classes[a]) == images[i].classList.contains(classes[a])) {
-                    for (let i = 0; i < images.length; i++) {
-                        if (images[i].classList.contains(classes[a])) {
-                            empty.style.display = 'none';
-                            images[i].style.display = 'block';
-                        } else {
-                            images[i].style.display = 'none';
-                        } 
-                    }                
+
+            for (let i = 0; i < images.length; i++) {
+                if (images[i].classList.contains(this.classList[1])) {
+                    empty.style.display = 'none';
+                    images[i].style.display = 'block';
+                } else {
+                    images[i].style.display = 'none';
+                    
+                }   
+                
+                console.log(images[i].classList.contains(this.classList[1]))
+
+                if (images[i].classList.contains(this.classList[1])) {
+                    empty.style.display = 'block';
                 }
             }
         });
-
     }
-
 }
 
 module.exports = filter;
