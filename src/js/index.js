@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         form = require('./parts/form'),
         filter = require('./parts/filter'),
         slider = require('./parts/slider'),
-        accordion = require('./parts/accordion'),
+        accordion = require('./parts/accordeon'),
         pictures = require('./parts/pictures');
 
     mainSlider();
