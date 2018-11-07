@@ -5,10 +5,11 @@ function filter() {
 
     for (let i = 0; i < menu.length; i++) {
         menu[i].addEventListener('click', function() {
+            let counter = 0;
+
             for (let i = 0; i < menu.length; i++) {
                 menu[i].classList.remove('active');
             }
-
             this.classList.add('active');
 
             for (let i = 0; i < images.length; i++) {
@@ -17,13 +18,15 @@ function filter() {
                     images[i].style.display = 'block';
                 } else {
                     images[i].style.display = 'none';
-                }   
-                
-                console.log(images[i].classList.contains(this.classList[1]))
+                } 
 
                 if (images[i].classList.contains(this.classList[1])) {
-                    empty.style.display = 'block';
-                } 
+                        counter++;
+                } else {
+                    if (counter == 0) {
+                            empty.style.display = 'block';
+                    }
+                }
             }
         });
     }

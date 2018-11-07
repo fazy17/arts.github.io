@@ -12,7 +12,6 @@ function accordion() {
 
                 if (accordionBlock[i].style.display == 'none') {
                     clear();
-
                     accordionBlock[i].style.display = 'block';
                     accordionBlock[i].className = 'col-md-8 col-md-offset-2 accordion-block animated fadeInDown';
                     accordionTitle[i].style.color = '#c818bc';
