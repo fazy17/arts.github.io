@@ -16,15 +16,11 @@ function filter() {
                 if (images[i].classList.contains(this.classList[1])) {
                     empty.style.display = 'none';
                     images[i].style.display = 'block';
+                    counter++;
                 } else {
                     images[i].style.display = 'none';
-                } 
-
-                if (images[i].classList.contains(this.classList[1])) {
-                        counter++;
-                } else {
                     if (counter == 0) {
-                            empty.style.display = 'block';
+                        empty.style.display = 'block';
                     }
                 }
             }
