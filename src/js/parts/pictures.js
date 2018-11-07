@@ -10,19 +10,15 @@ function pictures() {
             for (let i = 0; i < text.length; i++) {
                 text[i].style.display = 'none';
             }
-            
+
             if (image.classList.contains('size-1')) {
-                image.removeAttribute('src')
                 image.setAttribute('src', 'img/sizes-1-1.png');
             } else if (image.classList.contains('size-2')) {
-                image.removeAttribute('src')
                 image.setAttribute('src', 'img/sizes-2-1.png');
             } else if (image.classList.contains('size-3')) {
-                image.removeAttribute('src')
                 image.setAttribute('src', 'img/sizes-3-1.png');
                 text[3].style.display = 'block';
             } else if (image.classList.contains('size-4')) {
-                image.removeAttribute('src')
                 image.setAttribute('src', 'img/sizes-4-1.png');
             }
 
@@ -38,16 +34,12 @@ function pictures() {
             }
 
             if (image.classList.contains('size-1')) {
-                image.removeAttribute('src')
                 image.setAttribute('src', 'img/sizes-1.png');
             } else if (image.classList.contains('size-2')) {
-                image.removeAttribute('src')
                 image.setAttribute('src', 'img/sizes-2.png');
             } else if (image.classList.contains('size-3')) {
-                image.removeAttribute('src')
                 image.setAttribute('src', 'img/sizes-3.png');
             } else if (image.classList.contains('size-4')) {
-                image.removeAttribute('src')
                 image.setAttribute('src', 'img/sizes-4.png');
             }
         });
