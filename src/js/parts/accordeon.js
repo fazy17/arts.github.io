@@ -9,28 +9,27 @@ function accordion() {
         
         for (let i = 0; i < accordionTitle.length; i++) {
             accordionTitle[i].addEventListener('click', function() {
-                
-
-                for (let i = 0; i < accordionBlock.length; i++) {
-                    accordionBlock[i].style.display = 'none';
-                    accordionTitle[i].style.color = '#333';
-                }
 
                 if (accordionBlock[i].style.display == 'none') {
+                    clear();
 
                     accordionBlock[i].style.display = 'block';
                     accordionBlock[i].className = 'col-md-8 col-md-offset-2 accordion-block animated fadeInDown';
-                    accordionTitle[i].style.color = 'blue';
-                    
+                    accordionTitle[i].style.color = '#c818bc';
                 } else {
-                    accordionBlock[i].style.display = 'none';
+                    clear();   
                 }
 
-                
-                
             });
         }
+    }
 
+    function clear() {
+        for (let i = 0; i < accordionBlock.length; i++) {
+            accordionBlock[i].style.display = 'none';
+            accordionTitle[i].style.color = '#333';
+            
+        }
     }
 
     showBlock();
